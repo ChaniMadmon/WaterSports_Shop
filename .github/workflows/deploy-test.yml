@@ -30,7 +30,7 @@ jobs:
             # Build client
             cd ../Client
             npm install
-            npm run build
+            NODE_OPTIONS="--max-old-space-size=1024" npm run build
            
             # Copy build to nginx
             sudo rm -rf /var/www/html/*
